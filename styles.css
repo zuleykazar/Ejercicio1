@@ -6,7 +6,7 @@ css
 }
 
 html {
-    background-color: black;
+   #background-color: black;
 }
 
 
@@ -23,7 +23,7 @@ nav .links {
     align-items: center;
     margin-left: 400px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 0px;
     color: whitesmoke;
         
 }
@@ -165,7 +165,7 @@ h1 {
     width: 350px;
     height: 500px;
     border-radius: 3px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 30px;
     background: rgb(39, 39, 39)
 
@@ -203,7 +203,6 @@ textarea {
 }
 
 .pagina1 {
-
     text-align: center;
     height: 100%;
 
@@ -263,7 +262,7 @@ body .responsive3 {
     padding: none;
 }
 
-button .esquina-sup {
+.esquina-sup {
     border: none;
     background: whitesmoke;
     margin-left: 90%;
@@ -280,7 +279,6 @@ button .esquina-sup :hover {
     background-color: whitesmoke;
     margin: none;
     height: 100%;
-    padding: 0%;
 }
 
 ul {
@@ -307,7 +305,7 @@ ul a {
 .grupo {  
     height: 100%;
     padding-top: 40%;
-    padding-bottom: 55%;
+    padding-bottom: 65%;
     text-align: center;
 }
 
@@ -369,10 +367,13 @@ footer{
 
 .responsive1 {
     background-color: whitesmoke;
-    height: 100%;
-    padding-top: 55%;
-    padding-bottom: 65%;
     margin: none;
+    height: 100%;
+}
+
+#menu {
+    margin-block-start: 0 !important;
+
 }
 
 #parrafo-central-r1 {
@@ -382,6 +383,9 @@ footer{
     font-size: 20px;
     font-stretch: semi-expanded;
     text-align: center;
+    padding-top: 45%;
+    padding-bottom: 85%;
+
 }
 
 .responsive2 {
@@ -393,7 +397,7 @@ footer{
 .center-r2 {
     align-content: center;
     padding: 10px;
-    padding-bottom: 55%;
+    padding-bottom: 65%;
     padding-top:30%;
           
 }
