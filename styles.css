@@ -5,17 +5,32 @@ css
     box-sizing: border-box;
 }
 
-html {
-   #background-color: black;
+body {
+    --text-color: whitesmoke;
+
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background: rgb(29, 29, 29);
+    font-family: sans-serif;
+    padding: 20px;
+    transition: var(--transition-delay);
+    overflow: hidden;
 }
 
+body.light {
+    --text-color: black;
+    --transition-delay: 0.5s;
+
+    background: whitesmoke;
+    transition: var(--transition-delay);
+}
 
 nav {
     width: 100%;
     display: inline-block;
     text-align: center;
     margin-top: 0%;
- 
 }
 
 nav .links {
@@ -24,13 +39,11 @@ nav .links {
     margin-left: 400px;
     display: inline-block;
     margin-top: 0px;
-    color: whitesmoke;
-        
 }
 
 .links a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--text-color);
     font-weight: bolder;
     font-size: 12px;
     display: inline-block;
@@ -45,6 +58,8 @@ nav .links {
     margin-bottom: 10px;
     margin-top: 20px;
     align-content: center;
+    width: 150px;
+    display: flex;
 }
 
 .boton-r {
@@ -59,66 +74,35 @@ nav .links {
     width: 30px;
     height: 30px;
     padding: 20px 20px;
-    align-content: center;
 }
 
-label {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 50%;
-    margin: 5px;
-    align-content: center;
+#btn-light{
+    display: none;
 }
 
-.btn {
-    position: absolute;
-    top: 0;
-    left: 0;
+#boton{
     display: inline-block;
     width: 40px;
     height: 40px;
     background: url('images/sun.png');
     background-color: rgb(214, 30, 30);
-    background-repeat: no-repeat;
     background-size: 60%;
-    align-content: center;
-    text-align: center;
-   
-}
-
-span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 30px;
-    height: 30px;
+    background-position: center;
     border-radius: 50%;
-    align-content: center;
-    float: right;
-    text-align: center;
-    margin: 0;
-    display: inline-block;
-    
-
-}
-
-label input [type="checkbox"]:checked ~ body {
-    background-color: white ;
-
-}
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-left: 15px;
+       
+} 
 
 .container-buttons {
-    
     display: inline-block;
     border-radius: 50%;    
-    top: 20px
-    
+    top: 20px;
 }
 
 h2 {
-    color: whitesmoke;
+    color: var(--text-color);
     font-family: sans-serif;
     padding: 3px;
     font-size: medium;
@@ -129,8 +113,8 @@ h2 {
 .cajas {
     border-radius: 3px;
     border: none;
-    background-color: rgb(63, 63, 63, 5);
-    color: whitesmoke;
+    background-color: rgb(63, 63, 63, 0.2);
+    color: var(--text-color);
     display: block;
     padding: 10px;
     width: 90%;
@@ -140,20 +124,8 @@ h2 {
 
 }
 
-
-body {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    background: rgb(29, 29, 29);
-    font-family: sans-serif;
-    padding: 20px;
-
-}
-
-
 h1 {
-    color:whitesmoke;
+    color: var(--text-color);
     font-size: 20px;
     text-align: left;
     display: inline-block;
@@ -161,13 +133,12 @@ h1 {
 }
 
 .square {
-
     width: 350px;
     height: 500px;
     border-radius: 3px;
     margin: 20px auto;
     padding: 30px;
-    background: rgb(39, 39, 39)
+    background: rgb(39, 39, 39, 0.2)
 
 }
 
@@ -193,7 +164,7 @@ textarea {
 #btn-submit {
     text-decoration: none;
     text-align: center;
-    color: whitesmoke;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: bold;
     background-color: tomato;
@@ -202,55 +173,41 @@ textarea {
     cursor: pointer;
 }
 
-.pagina1 {
-    text-align: center;
-    height: 100%;
-
-}
-
 #parrafo-central {
-    color: whitesmoke;
+    color: var(--text-color);
     font-weight: bold;
     font-family: sans-serif;
-    padding-top: 180px;
+    padding-top: 200px;
     padding-bottom: 300px;
     font-size: 14px;
     font-stretch: semi-expanded;
-
+    text-align: center;
 }
 
-h2 .titulo-central2 {
-    color: whitesmoke;
+h2.titulo-central2 {
+    color: var(--text-color);
     font-family: sans-serif;
-    padding-top: 180px;
     font-size: medium;
     font-weight: 300;
     text-align: center;
     margin:auto;
     font-stretch: semi-expanded;
-
 }
 
-.pagina2 {
+h3 {
+    padding-top: 180px;
     text-align: center;
-    height: 100%;
-}
-
-.center {
-    margin: auto;
-    padding-top: 160px;
-
+    color: var(--text-color);
 }
 
 #parrafo-central2 {
-    color: whitesmoke;
+    color: var(--text-color);
     font-weight: 600;
     font-family: sans-serif;
-    padding-top: 5px;
     padding-bottom: 300px;
     font-size: 12px;
     font-stretch: expanded;
-
+    text-align: center;
 }
 
 body .responsive3 {
@@ -260,13 +217,15 @@ body .responsive3 {
     justify-content: center;
     display: block;
     padding: none;
+    margin: 0%;
 }
 
 .esquina-sup {
     border: none;
-    background: whitesmoke;
+    background: var(--text-color);
     margin-left: 90%;
     border-radius: 15%;
+    margin-top: 20px;
         
 }
 
@@ -276,9 +235,10 @@ button .esquina-sup :hover {
 }
 
 .responsive3 {
-    background-color: whitesmoke;
+    background-color: var(--text-color);
     margin: none;
     height: 100%;
+    padding: 0;
 }
 
 ul {
@@ -304,10 +264,12 @@ ul a {
 
 .grupo {  
     height: 100%;
-    padding-top: 40%;
+    padding-top: 50%;
     padding-bottom: 65%;
     text-align: center;
-}
+    margin: 0%;
+    padding-left: 0%;
+   }
 
 hr {
     color: rgb(0, 0, 0);
@@ -348,7 +310,7 @@ footer{
     height: 2.5em; 
     width:2.5em;
     margin-right:0.93em; 
-    background-image: url("images/buttom.png") 
+   background-image: url("images/buttom.png") 
 }
 
 #itemsMenu li:nth-child(1) div {
@@ -373,7 +335,6 @@ footer{
 
 #menu {
     margin-block-start: 0 !important;
-
 }
 
 #parrafo-central-r1 {
@@ -383,9 +344,8 @@ footer{
     font-size: 20px;
     font-stretch: semi-expanded;
     text-align: center;
-    padding-top: 45%;
-    padding-bottom: 85%;
-
+    padding-top: 40%;
+    padding-bottom: 50%;
 }
 
 .responsive2 {
@@ -397,8 +357,8 @@ footer{
 .center-r2 {
     align-content: center;
     padding: 10px;
-    padding-bottom: 65%;
-    padding-top:30%;
+    padding-bottom: 50%;
+    padding-top:40%;
           
 }
 
