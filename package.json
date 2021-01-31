@@ -1,0 +1,25 @@
+{
+  "name": "darkmode",
+  "version": "1.0.0",
+  "description": "web modo claro oscuro",
+  "main": "js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuleykazar/Ejercicio1.git"
+  },
+  "keywords": [
+    "modo",
+    "claro",
+    "oscuro",
+    "ejercicio"
+  ],
+  "author": "zuleykazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuleykazar/Ejercicio1/issues"
+  },
+  "homepage": "https://github.com/zuleykazar/Ejercicio1#readme"
+}
